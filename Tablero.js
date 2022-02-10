@@ -48,6 +48,7 @@ class Tablero {
     }
   }
 }
-
 const tablero = new Tablero(4, 8);
 tablero.imprimirTablero();
+
+//module.exports = tablero.fillTablero();
