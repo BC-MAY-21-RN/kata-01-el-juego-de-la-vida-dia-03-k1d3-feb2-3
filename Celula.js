@@ -17,4 +17,3 @@ export default class Celula {
 }
 
 const celula = new Celula(2, 5);
-console.log(celula.getPostX());

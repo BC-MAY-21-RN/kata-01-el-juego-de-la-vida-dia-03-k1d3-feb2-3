@@ -5,7 +5,7 @@ class Tablero {
     this.ancho = ancho;
     this.alto = alto;
     this.matriz = this.fillTablero();
-    this.establecerPrimeraGeneracion(3);
+    this.establecerPrimeraGeneracion(5);
   }
 
   random(min, max) {
@@ -36,9 +36,18 @@ class Tablero {
       }
     } while (contador < numCelulas);
   }
+
+  imprimirTablero() {
+    let matrizTexto = '';
+    for (let x = 0; x < this.ancho; x++) {
+      for (let y = 0; y < this.alto; y++) {
+        matrizTexto += this.matriz[x][y].estado == 1 ? '* ' : '- ';
+      }
+      console.log(matrizTexto);
+      matrizTexto = '';
+    }
+  }
 }
 
 const tablero = new Tablero(4, 8);
-tablero.matriz;
-
-console.log(tablero.matriz);
+tablero.imprimirTablero();
