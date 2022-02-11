@@ -1,6 +1,6 @@
-import Celula from './Celula.js';
+const Celula = require('./Celula');
 
-class Tablero {
+module.exports = class Tablero {
   constructor(ancho, alto) {
     this.ancho = ancho;
     this.alto = alto;
@@ -47,8 +47,8 @@ class Tablero {
       matrizTexto = '';
     }
   }
-}
-const tablero = new Tablero(4, 8);
-tablero.imprimirTablero();
+};
+// const tablero = new Tablero(4, 8);
+// tablero.imprimirTablero();
 
 //module.exports = tablero.fillTablero();

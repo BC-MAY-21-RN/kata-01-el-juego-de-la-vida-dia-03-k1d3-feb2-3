@@ -1,4 +1,4 @@
-export default class Celula {
+module.exports = class Celula {
   constructor(posX, posY) {
     this.posX = posX;
     this.posY = posY;
@@ -14,6 +14,9 @@ export default class Celula {
   }
   setEstado(estado) {
     this.estado = estado;
+  }
+  getEstado() {
+    return this.estado;
   }
 
   buscarVecinos() {
@@ -38,10 +41,11 @@ export default class Celula {
     };
     return vecinos;
   }
-}
-const celular = new Celula(1, 1);
-console.log(celular.vecinos.nTop.x);
+};
+// const celular = new Celula(1, 1);
+// console.log(celular.vecinos.nTop.x);
 
-/*0.0 0.1 0.2
+/*Posiciones
+  0.0 0.1 0.2
   1.0 1.1 1.2
   2.0 2.1 2.2*/
